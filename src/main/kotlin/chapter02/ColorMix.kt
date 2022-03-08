@@ -1,7 +1,7 @@
 package chapter02
 
-import chapter02_1.Color
-import chapter02_1.Color.*;
+import chapter02.chapter02_1.Color
+import chapter02.chapter02_1.Color.*;
 
 class ColorMix {
 
