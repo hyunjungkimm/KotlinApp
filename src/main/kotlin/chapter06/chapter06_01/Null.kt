@@ -1,4 +1,4 @@
-package chapter06
+package chapter06.chapter06_01
 
 class Null {
 

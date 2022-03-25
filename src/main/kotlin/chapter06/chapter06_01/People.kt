@@ -1,6 +1,4 @@
-package chapter06
-
-import chapter05.sendEmail
+package chapter06.chapter06_01
 
 class People(val firstName:String, val lastName :String) {
     override fun equals(o: Any?): Boolean {
@@ -30,7 +28,22 @@ fun verifyUserInput(input:String?){
     }
 }
 
+fun <T> printHashCode(t:T){
+    println(t?.hashCode()) // "t"가 null이 될 수 있으므로 안전한 호출을 써야만 한다.
+
+}
+
+fun <T:Any> printHashCodeT(t:T){// 이제 "T"는 널이 될 수 없는 타입이다.
+    println(t.hashCode())
+}
+
 fun main() {
+
+    //printHashCodeT(null) //이 코드는 컴파일되지 않는다. 널이 될 수 없는 타입의 파라미터에 널을 넘길 수 없다.
+    printHashCodeT(42)//42
+
+    //"T"의 타입은 "Any?"로 추론된다.
+    printHashCode(null)//null
 
     verifyUserInput(" ")//Please fill in the required fields
 //isNullOrBlank에 "null"을 수신 객체로 전달해도 아무런 예외가 발생하지 않는다.
