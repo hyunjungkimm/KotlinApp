@@ -19,7 +19,7 @@ fun fail(message:String):Nothing {
 fun main() {
 
 
-    fail("Error occurred")
+    //fail("Error occurred")
 
     val answer: Any =42
 
